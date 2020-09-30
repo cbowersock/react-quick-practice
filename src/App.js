@@ -27,18 +27,23 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+        <div className="col-6 mx-auto mt-5">
         <Overview tasks={this.state.tasks}/>
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            placeholder="task"
-            onChange={this.handleChange}
-            value={this.state.input}
-            ></input>
-          <button type="submit">Add a Task</button>
-        </form>
-      </div>
+          <form onSubmit={this.handleSubmit}>
+          <div className="form-group">
+            <input
+              type="text"
+              placeholder="task"
+              onChange={this.handleChange}
+              value={this.state.input}
+              className="form-control"
+              ></input>
+            </div>
+            <div className="form-group">
+              <button type="submit" className="btn btn-primary">Add a Task</button>
+            </div>
+          </form>
+        </div>
     );
   }
 }
